@@ -21,7 +21,7 @@ public class Menu {
     protected static void options() {
         System.out.println("#  [1]Play Game One [2]Play Game Two   #");
     }
-    // Full menu
+    // Prints Full menu
     protected static void print() {
         bigLine();
         rules();
