@@ -1,6 +1,7 @@
 package com.paydues;
 
 import java.util.Random;
+import java.util.Stack;
 
 public class Dice {
     // Roll function
@@ -15,5 +16,22 @@ public class Dice {
         }
         // Return value
         return rolled;
+    }
+
+    protected static void gameOne() {
+        // Initialize some vars
+        // updates throughout game
+        int die = 0;
+        Stack<Integer> previousRolls = new Stack<Integer>();
+
+        // Test loop
+        for (int i = 0; i < 10; i++) {
+            die = rollOne();
+            previousRolls.push(die);
+            System.out.printf("Die value: %d\n", die);
+        }
+
+        System.out.printf("peek(): %d\n", previousRolls.peek());
+        System.out.printf("last(): %d\n", previousRolls.lastElement());
     }
 }

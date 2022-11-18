@@ -21,11 +21,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        int roll;
-        for(int i = 0; i < 25; i++){
-            roll = Dice.rollOne();
-            System.out.printf("Die rolled: %d\n", roll);
-        }
+        Dice.gameOne();
         
     }
 }
