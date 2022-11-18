@@ -37,7 +37,7 @@ public class Dice {
             // Roll, keep count, and print roll
             die = rollOne();
             count++;
-            System.out.printf("Die Value: %d\n", die);
+            System.out.printf("Roll %d: \t%d\n", count, die);
             // Peek at the stack to see if last value was a 5 and current is a 6
             if(previousRolls.peek() == FIVE && die == SIX) {
                 // Set flag
@@ -68,7 +68,7 @@ public class Dice {
             // Roll, keep count, and print roll
             die = rollOne();
             count++;
-            System.out.printf("Die Value: %d\n", die);
+            System.out.printf("Roll %d: \t%d\n", count, die);
             // Peek at the stack to see if last value was a 5 and current is a 6
             if(previousRolls.peek() == FIVE && die == FIVE) {
                 // Set flag

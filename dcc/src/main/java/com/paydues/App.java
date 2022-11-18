@@ -1,5 +1,7 @@
 package com.paydues;
 
+import java.util.Scanner;
+
 /**
  * Alice wants to join her school's Probability Student 
  * Club. Membership dues are computed via one of two 
@@ -21,8 +23,29 @@ public class App
 {
     public static void main( String[] args )
     {
-        Dice.gameOne();
-        Dice.gameTwo();
-        
+        // Create scanner object
+        Scanner scan = new Scanner(System.in);
+        // Set vars
+        char input = ' ';
+        // Print menu
+        Menu.print();
+        // Get input
+        while (input != '1' && input != '2') {
+            System.out.printf("\nPlease select option [1] or [2]: ");
+            input = scan.nextLine().charAt(0);
+            switch (input) {
+                case '1':
+                    Dice.gameOne();
+                    break;
+                case '2':
+                    Dice.gameTwo();
+                    break;
+                default:
+                    System.out.printf("Input must be [1] or [2], please try again");
+
+            }
+        }
+        Menu.goodbye();
+        scan.close();
     }
 }
