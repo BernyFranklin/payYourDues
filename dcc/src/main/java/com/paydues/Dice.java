@@ -26,6 +26,7 @@ public class Dice {
         // updates throughout game
         int die = 0;
         int count = 0;
+        // Create stack to store every roll
         Stack<Integer> previousRolls = new Stack<Integer>();
         // Add a value so stack isn't empty
         previousRolls.push(0);
